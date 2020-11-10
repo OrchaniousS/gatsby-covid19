@@ -37,7 +37,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, date, }, country, cc }) =
               <img
                 src={`https://flagcdn.com/28x21/${code.toLowerCase()}.png`}
                 srcSet={`https://flagcdn.com/56x42/${code.toLowerCase()}.png 2x,
-                          https://flagcdn.com/84x63${code.toLowerCase()}.png 3x`}
+                          https://flagcdn.com/84x63/${code.toLowerCase()}.png 3x`}
                 width="28"
                 height="21"
                   alt={name} />
