@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0;
+  /* background: rgba(112, 104, 104, 0.445); */
+  border-radius: 10px;
+}
+
+.country {
+  background: linear-gradient(#d3cce3, #e9e4f0);
+  border-bottom: 5px solid rgba(214, 22, 22, 0.37);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  justify-content: center;
+  text-align-last: center;
+}
+
+@media only screen and (max-width: 770px) {
+  .country {
+    padding: 0.5rem;
+    width: 100%;
+  }
+  #country {
+    margin: 0.8rem;
+  }
+}
+@media only screen and (min-width: 770px) {
+  .country {
+    padding: 0.8rem 1.8rem;
+    min-width: 170px;
+    /* width: 80%; */
+  }
+  #country {
+    margin: 1.2rem;
+  }
+}
+
+.infected {
+  border-bottom: 10px solid rgba(132, 0, 255, 0.5);
+}
+
+.recovered {
+  border-bottom: 10px solid rgba(0, 255, 0, 0.5);
+}
+
+.deaths {
+  border-bottom: 10px solid rgba(255, 0, 0, 0.5);
+}

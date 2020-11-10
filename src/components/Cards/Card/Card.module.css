@@ -1,0 +1,30 @@
+.card {
+  margin: 0 2% !important;
+  background: linear-gradient(#e0eafc, #cfdef3);
+}
+
+.card h2,
+.card h5 {
+  color: rgba(0, 0, 0, 0.75);
+}
+
+@media only screen and (max-width: 770px) {
+  .card {
+    margin: 2% 0 !important;
+  }
+}
+
+.cardTypho {
+  display: flex;
+  flex-direction: row;
+  padding: 5px 16px;
+  margin-top: -5px;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 16px;
+  /* align-items: center; */
+}
