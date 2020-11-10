@@ -11,5 +11,5 @@ Covid 19 tracker made with 2 API`s
 ![alt text][logo]
 ![alt text][logo2]
 
-[logo]: './Examples/ss1.jpg' "screenshot 1"
-[logo2]: './Examples/ss2.jpg' "screenshot 2"
+[logo]: '/Examples/ss1.jpg' "screenshot 1"
+[logo2]: '/Examples/ss2.jpg' "screenshot 2"
