@@ -1,15 +1,30 @@
-## GATSBY COVID-19 TACKER
+# COVID-19 TACKER WEBSITE
 
-Covid 19 tracker made with 2 API`s
+### [Live Site](https://covid-19israel.web.app/)
+
+## Introduction
+
+COVID-19 Live Tracker Website made with React and Gatsby.
+Responisve Website, Fully PWA(Fully offline), SPA.
+
+### Setup
+
+- ` npm i && gatsby build`
+
+## Main page
+
+![Alt text](/Examples/ss1.jpg "Data Chart Graph")
+![Alt text](/Examples/ss2.jpg "Data Chart Bars")
+
+### USED API`S
 
 - https://covid19.mathdro.id/api
 - https://api.covidtracking.com/v1/us/daily.json
 
-## DEMO
+### Packages used
 
-[LIVE SITE](https://covid-19israel.web.app/)
-
-### Screenshots
-
-![Alt text](/Examples/ss1.jpg "screenshot 1")
-![Alt text](/Examples/ss2.jpg "screenshot 2")
+- Gatsby
+- Chart.js
+- Firebase
+- Font Awesome
+- Axios

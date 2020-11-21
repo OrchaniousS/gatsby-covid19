@@ -20,10 +20,14 @@ const Countries = ({ handleCountryChange }) =>
     
     return (<>
         <FormControl className={styles.formControl}>
-        <NativeSelect defaultValue="" onChange={(e) => handleCountryChange(e.target.value)}>
-        <option value="">United States</option>
-        {countries.map((country, i) => <option key={i} value={country}>{country}</option>)}
-      </NativeSelect>
+            <NativeSelect defaultValue="" onChange={(e) => handleCountryChange(e.target.value)}>
+            <option  value="">United States</option>
+                {countries.map((country, i) =>
+                        <option key={i} value={country ==='Taiwan*' ? 'Taiwan' : country}>
+                            {country ==='Taiwan*' ? 'Taiwan': country}
+                        </option>
+                )}
+         </NativeSelect>
     </FormControl>
     </>)
 }

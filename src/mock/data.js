@@ -1,6 +1,6 @@
 export const headData = {
   title: "COVID19 | Home",
-  lang: "en,he",
+  lang: "en",
   description:
     "Hey there :) COVID-19 visual data presention of cases all around the world",
 }
