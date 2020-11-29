@@ -1,4 +1,4 @@
-# COVID-19 TACKER WEBSITE ### [Live Site](https://covid-19israel.web.app/)
+# COVID-19 TACKER WEBSITE [Live Site](https://covid-19israel.web.app/)
 
 ## Introduction
 
