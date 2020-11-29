@@ -26,6 +26,33 @@ export const fetchDataCountry = async country => {
   }
 }
 
+export const fetchDataDaily = async () => {
+  try {
+    const { data } = await axios.get(urlDaily)
+
+    return data.map(({ positive, recovered, death, dateChecked }) => ({
+      confirmed: { positive },
+      recovered,
+      deaths: death,
+      date: new Date(dateChecked).toLocaleDateString(),
+    }))
+  } catch (error) {
+    return error
+  }
+}
+
+export const fetchCountries = async () => {
+  try {
+    const {
+      data: { countries },
+    } = await axios.get(`${url}/countries`)
+
+    return countries.map(country => country.name)
+  } catch (error) {
+    return error
+  }
+}
+
 export const fetchCountryCode = async () => {
   const countryCodes = [
     { name: "Afghanistan", code: "AF" },
@@ -275,33 +302,6 @@ export const fetchCountryCode = async () => {
 
   try {
     return countryCodes
-  } catch (error) {
-    return error
-  }
-}
-
-export const fetchDataDaily = async () => {
-  try {
-    const { data } = await axios.get(urlDaily)
-
-    return data.map(({ positive, recovered, death, dateChecked }) => ({
-      confirmed: { positive },
-      recovered,
-      deaths: death,
-      date: new Date(dateChecked).toLocaleDateString(),
-    }))
-  } catch (error) {
-    return error
-  }
-}
-
-export const fetchCountries = async () => {
-  try {
-    const {
-      data: { countries },
-    } = await axios.get(`${url}/countries`)
-
-    return countries.map(country => country.name)
   } catch (error) {
     return error
   }
