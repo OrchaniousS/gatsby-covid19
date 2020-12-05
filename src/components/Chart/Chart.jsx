@@ -17,17 +17,24 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
 
   const barChart = confirmed && (
     <Bar
+      className={styles.barSection}
       data={{
-        labels: ["Infected", "Recovered", "Deaths"],
+        labels: ["Infected", "Active", "Recovered", "Deaths"],
         datasets: [
           {
             label: "People",
             backgroundColor: [
               "rgba(0, 0, 255, 0.5)",
+              "rgb(255,255,255)",
               "rgba(0, 255, 0, 0.5)",
               "rgba(255, 0, 0, 0.5)",
             ],
-            data: [confirmed, recovered, deaths],
+            data: [
+              confirmed,
+              confirmed - recovered - deaths,
+              recovered,
+              deaths,
+            ],
           },
         ],
       }}
@@ -35,6 +42,7 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
         legend: { display: false },
         title: { display: true, text: `Current state in ${country}` },
       }}
+      borderSkipped={"bottom"}
     />
   )
 
@@ -52,10 +60,12 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
             fill: true,
           },
           {
-            data: dailyData.map(data => data.deaths),
-            label: "Deaths",
-            borderColor: "red",
-            backgroundColor: "rgba(255, 0, 0, 0.5)",
+            data: dailyData.map(
+              data => data.confirmed.positive - data.deaths - data.recovered
+            ),
+            label: "Active",
+            borderColor: "white",
+            backgroundColor: "rgba(255, 255, 255, 0.5)",
             fill: true,
           },
           {
@@ -63,6 +73,13 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
             label: "Recovered",
             borderColor: "green",
             backgroundColor: "rgba(0, 255, 0, 0.5)",
+            fill: true,
+          },
+          {
+            data: dailyData.map(data => data.deaths),
+            label: "Deaths",
+            borderColor: "red",
+            backgroundColor: "rgba(255, 0, 0, 0.5)",
             fill: true,
           },
         ],

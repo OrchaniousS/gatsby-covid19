@@ -1,6 +1,16 @@
 .card {
-  margin: 0 2% !important;
   background: linear-gradient(#e0eafc, #cfdef3);
+}
+
+@media (min-width: 880px) {
+  .card {
+    margin: 0 2% !important;
+  }
+}
+@media (max-width: 880px) {
+  .card {
+    /* margin: 5% 15%; */
+  }
 }
 
 .card h2,

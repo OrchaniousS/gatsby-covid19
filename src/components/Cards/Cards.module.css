@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: center;
   margin: 40px 0;
-  /* background: rgba(112, 104, 104, 0.445); */
   border-radius: 10px;
 }
 
@@ -38,6 +37,10 @@
 
 .infected {
   border-bottom: 10px solid rgba(132, 0, 255, 0.5);
+}
+
+.active {
+  border-bottom: 10px solid rgba(94, 92, 97, 0.5);
 }
 
 .recovered {
