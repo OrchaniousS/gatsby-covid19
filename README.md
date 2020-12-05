@@ -12,7 +12,7 @@ Responisve Website, Fully PWA(Fully offline), SPA.
 ## Main page
 
 _Data chart Line & Bar , responsive Desktop and Mobile View_
-![Alt text](/Examples/ss1.jpg "Data Chart Graph")
+![Alt text](/Examples/ss1d.jpg "Data Chart Graph")
 ![Alt text](/Examples/ss2.jpg "Data Chart Bars")
 
 ### USED API`S
